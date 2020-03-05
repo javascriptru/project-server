@@ -4,14 +4,12 @@ const {task, series, parallel} = require('gulp');
 exports.Application = require('./libs/application');
 exports.ecosystem = require('./libs/ecosystem.config');
 
-exports.addTasks = function({ publicRoot }) {
-  task('server', require('./tasks/server'));
+exports.addTasks = function(app) {
+  task('server', require('./tasks/server')(app));
 
-  task('nodemon', require('./tasks/nodemon'));
+  task('nodemon', require('./tasks/nodemon')(app));
 
-  task('livereload', require('./tasks/livereload').bind(null, {
-    watch: [path.join(publicRoot, "**/*.*")]
-  }));
+  task('livereload', require('./tasks/livereload')(app));
 
   task('dev', parallel('nodemon', 'livereload'));
 };

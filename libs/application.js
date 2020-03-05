@@ -17,6 +17,7 @@ module.exports = class Application extends Koa {
     if (options.cors) {
       this.use(require('@koa/cors')({maxAge: 86400}));
     }
+    this.publicRoot = options.publicRoot;
   }
 
   run() {
