@@ -1,0 +1,21 @@
+{
+  "name": "@javascriptru/project-server",
+  "version": "1.0.0",
+  "description": "Project server",
+  "keywords": [],
+  "author": "Ilya Kantor",
+  "dependencies": {
+    "@koa/cors": "^3.0.0",
+    "@koa/multer": "^2.0.1",
+    "@koa/router": "^8",
+    "bunyan": "^1.8.12",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-favicon": "^2.0.1",
+    "koa-logger": "^3.2.0",
+    "koa-send": "^5.0.0",
+    "koa-static": "^5.0.0",
+    "nodemon": "^1.19.4",
+    "uuid": "^1.19.4"
+  }
+}

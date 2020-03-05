@@ -1,0 +1,12 @@
+extends layout
+
+- let title = error.title || 'Страница не найдена'
+- let code = 404
+
+block content
+  +e.text
+    if error.info
+      p= error.info
+
+  +e.text
+    a(href="/") Перейти на главную страницу

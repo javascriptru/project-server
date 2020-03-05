@@ -1,0 +1,11 @@
+extends layout
+
+- let title = error.title ||'Доступ запрещён'
+- let code = 403
+
+block content
+  +e.text
+    if error.info
+      != error.info
+    else
+      | Не хватает прав.

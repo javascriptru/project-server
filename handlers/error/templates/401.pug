@@ -1,0 +1,11 @@
+extends layout
+
+- let title = error.title || 'Требуется авторизация'
+- let code = 401
+
+block content
+  +e.text
+    if error.description
+      != error.description
+    else
+      | Возможно, вам нужно войти в сайт?

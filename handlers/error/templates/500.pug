@@ -1,0 +1,17 @@
+extends layout
+
+- let title = error.title || 'Ошибка на сервере'
+- let code = 500
+- let supportEmail = 'iliakan@javascript.info'
+
+block content
+  if error.info
+    +e.text
+      p!= error.info
+
+  - let subject = encodeURIComponent(`Ошибка 500 на ${url.href}`);
+  +e.text
+    | Мы анализируем и исправляем возникающие ошибки, но вы можете ускорить этот процесс,
+    | сообщив подробности на <a href="mailto:#{supportEmail}?subject=#{subject}">#{supportEmail}</a>.
+  +e.text
+    +e('span').request RequestId: #{requestId}

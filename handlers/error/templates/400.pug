@@ -1,0 +1,12 @@
+extends layout
+
+- let title = error.title || 'Некорректный запрос'
+- let code = 400
+
+block content
+  if error.errors
+    +e.text
+      dl
+        each value, key in error.errors
+          dt= key
+          dd= value.message

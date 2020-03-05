@@ -1,0 +1,12 @@
+doctype html
+head
+  title= headTitle || title
+  block variables
+
+body
+  .error-page
+    h1.error-page__title!= title
+
+    .error-page__code= code
+
+  block content
