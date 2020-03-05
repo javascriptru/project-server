@@ -1,5 +1,6 @@
-let livereload = require('gulp-livereload');
-let chokidar = require('chokidar');
+const path = require('path');
+const livereload = require('gulp-livereload');
+const chokidar = require('chokidar');
 
 module.exports = function(app) {
 
