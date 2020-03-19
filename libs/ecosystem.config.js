@@ -4,7 +4,7 @@ module.exports = (name, host, port) => {
     script:             "./node_modules/.bin/gulp",
     args:               "server",
     instances:          "1",
-    max_memory_restart: "2G",
+    max_memory_restart: "500M",
     error:              `/var/log/node/${name}.err.log`,
     output:             `/var/log/node/${name}.out.log`,
     log:                `/var/log/node/${name}.log`,
