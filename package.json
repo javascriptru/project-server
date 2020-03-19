@@ -9,6 +9,7 @@
     "@koa/multer": "^2.0.1",
     "@koa/router": "^8",
     "bunyan": "^1.8.12",
+    "gulp-livereload": "^4.0.2",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
     "koa-favicon": "^2.0.1",
