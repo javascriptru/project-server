@@ -1,9 +1,9 @@
 extends layout
 
-- let title = error.title || 'Некорректный запрос'
-- let code = 400
-
 block content
+  - let title = error.title || 'Некорректный запрос'
+  - let code = 400
+  
   if error.errors
     +e.text
       dl

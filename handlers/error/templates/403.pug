@@ -1,9 +1,9 @@
 extends layout
 
-- let title = error.title ||'Доступ запрещён'
-- let code = 403
-
 block content
+  - let title = error.title ||'Доступ запрещён'
+  - let code = 403
+  
   +e.text
     if error.info
       != error.info

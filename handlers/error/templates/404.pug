@@ -1,9 +1,10 @@
 extends layout
 
-- let title = error.title || 'Страница не найдена'
-- let code = 404
-
 block content
+
+  - let title = error.title || 'Страница не найдена'
+  - let code = 404
+
   +e.text
     if error.info
       p= error.info

@@ -1,9 +1,9 @@
 extends layout
 
-- let title = error.title || 'Требуется авторизация'
-- let code = 401
-
 block content
+  - let title = error.title || 'Требуется авторизация'
+  - let code = 401
+
   +e.text
     if error.description
       != error.description
