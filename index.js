@@ -2,7 +2,6 @@ const path = require('path');
 const {task, series, parallel} = require('gulp');
 
 exports.Application = require('./libs/application');
-exports.ecosystem = require('./libs/ecosystem.config');
 
 exports.addTasks = function(app) {
   task('server', require('./tasks/server')(app));
