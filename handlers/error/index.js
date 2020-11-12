@@ -48,7 +48,8 @@ function renderError(ctx, err) {
       };
     } else {
       ctx.body = pug.renderFile(`${__dirname}/templates/400.pug`, {
-        error:   err
+        error:   err,
+        title: `Error ${err.status || ''}`
       });
     }
 
